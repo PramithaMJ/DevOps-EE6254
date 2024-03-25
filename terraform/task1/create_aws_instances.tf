@@ -30,7 +30,7 @@ terraform {
     }
   }
 }
-//c
+
 provider "aws" {
   region                   = "us-east-1"
   shared_credentials_files = ["credentials"]
@@ -38,8 +38,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "first_server" {
-  #aws machine image 
-  #https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
+
   ami           = var.ami
   instance_type = var.instance_type
   tags = {
